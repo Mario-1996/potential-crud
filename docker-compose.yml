@@ -1,0 +1,24 @@
+version: "3"
+services:
+  api:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    links:
+      - link-db
+  link-db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=developer
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
