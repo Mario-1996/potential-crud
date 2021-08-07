@@ -30,13 +30,13 @@
    - página de Listagem
 
 
-![](.gitHub/listagem.jpeg)
+![](assets/listagem.jpeg)
 
 
    - página de Cadastro
 
 
-![](.gitHub/cadastro.jpeg)
+![](assets/cadastro.jpeg)
 
 ## Testes Unitários:
 #### Para executar os testes acesse a pasta back e execute o comando abaixo:
@@ -45,13 +45,13 @@
     yarn test
 ```
 
-![](.gitHub/tests.jpeg)
+![](assets/tests.jpeg)
 
 ## Documetação da API no Postman:
 
 - [DocumentacaoPostman](https://documenter.getpostman.com/view/13685908/TzskD3NV)
 
-![](.gitHub/Postman.jpeg)
+![](assets/Postman.jpeg)
 
 ## Redes Sociais:
 
