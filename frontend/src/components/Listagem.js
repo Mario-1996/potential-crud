@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Col, Container, Pagination, Form, Row, Table } from "react-bootstrap";
+import { Button, Col, Container, Form, Row, Table } from "react-bootstrap";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { BsFillTrashFill, BsPencilSquare } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -22,10 +22,10 @@ const Listagem = () => {
 
   const destroyDeveloper = async (id) => {
     const response = await api.delete(`/developers/${id}`);
-  
-    if (response.status === 204 ) {
-     window.alert("Removido com Sucesso !");
-     findDeveloper(query)
+
+    if (response.status === 204) {
+      window.alert("Removido com Sucesso !");
+      findDeveloper(query)
     }
   }
 
@@ -75,42 +75,42 @@ const Listagem = () => {
         <tbody>
           {listDev.length > 0 &&
             listDev.map((dev) => {
-            return (
-              <tr key={dev.id}>
-                <td>{dev.nome}</td>
-                <td>{dev.sexo}</td>
-                <td>{dev.idade}</td>
-                <td>{dev.hobby}</td>
-                <td>{formateDate(dev.datanascimento)}</td>
-                <td className="d-flex justify-content-center gap-2">
-                  <Link
-                    to={`/cadastrar/${dev.id}`}
-                    style={{ textDecoration: "none", color: "#08f" }}
-                  >
-                    <Button  
-                    variant="success" 
-                    size="sm"
-                    type="button">
-                      <BsPencilSquare />
-                    </Button>
-                  </Link>
+              return (
+                <tr key={dev.id}>
+                  <td>{dev.nome}</td>
+                  <td>{dev.sexo}</td>
+                  <td>{dev.idade}</td>
+                  <td>{dev.hobby}</td>
+                  <td>{formateDate(dev.datanascimento)}</td>
+                  <td className="d-flex justify-content-center gap-2">
+                    <Link
+                      to={`/cadastrar/${dev.id}`}
+                      style={{ textDecoration: "none", color: "#08f" }}
+                    >
+                      <Button
+                        variant="success"
+                        size="sm"
+                        type="button">
+                        <BsPencilSquare />
+                      </Button>
+                    </Link>
 
-                  <Button
-                    variant="danger"
-                    type="button"
-                    size="sm"
-                    onClick={() => {
-                      if (window.confirm(`Deseja Deletar o Desenvolvedor ${dev.nome} ?`)) {
-                        destroyDeveloper(dev.id)
-                      }
-                    }}
-                  >
-                    <BsFillTrashFill />
-                  </Button>
-                </td>
-              </tr>
-            );
-          })}
+                    <Button
+                      variant="danger"
+                      type="button"
+                      size="sm"
+                      onClick={() => {
+                        if (window.confirm(`Deseja Deletar o Desenvolvedor ${dev.nome} ?`)) {
+                          destroyDeveloper(dev.id)
+                        }
+                      }}
+                    >
+                      <BsFillTrashFill />
+                    </Button>
+                  </td>
+                </tr>
+              );
+            })}
         </tbody>
       </Table>
     </Container>

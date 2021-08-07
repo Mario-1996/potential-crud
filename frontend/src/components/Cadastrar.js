@@ -32,7 +32,6 @@ function Cadastrar() {
     event.preventDefault();
     const formData = new FormData(event.target)
     const data = Object.fromEntries(formData)
-    console.log(data)
 
     if (!id) {
       const response = await api.post(`/developers`, data);
