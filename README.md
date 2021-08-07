@@ -45,7 +45,7 @@
     yarn test
 ```
 
-![](.gitHub/test.jpeg)
+![](.gitHub/tests.jpeg)
 
 ## Redes Sociais:
 
