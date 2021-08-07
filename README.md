@@ -47,6 +47,12 @@
 
 ![](.gitHub/tests.jpeg)
 
+## Documetação da API no Postman:
+
+- [DocumentacaoPostman](https://documenter.getpostman.com/view/13685908/TzskD3NV)
+
+![](.gitHub/Postman.jpeg)
+
 ## Redes Sociais:
 
 - [Linkedin](https://www.linkedin.com/in/mario-prohman/)
